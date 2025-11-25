@@ -51,6 +51,7 @@ def off_on_menu(settings_states:dict[str, bool], settings_text:dict[str:str]=Non
         n = len(settings_states)
 
         print("0. Назад")
+        print()
         i = 1
         for s, st in settings_states.items():
             print(f"{i}. {settings_text[s]} ({'ON' if st else 'OFF'})")
