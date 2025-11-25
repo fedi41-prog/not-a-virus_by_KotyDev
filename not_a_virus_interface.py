@@ -18,6 +18,7 @@ def choose(options):
     n = len(options)
 
     print("0. Назад")
+    print()
     for i in range(1, n + 1):
         state = "ON" if options[i] else "OFF"
         print(f"{i}. {options[i]} ({state})")
