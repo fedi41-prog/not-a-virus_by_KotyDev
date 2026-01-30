@@ -1,12 +1,12 @@
-import os
+import os, tk
 from tkinter import filedialog
 from colorama import Fore, Back, Style
 import time
 
-launge = 2
 
-os.system('cls')
-os.system('color e')
+# os.system('cls||clear')
+# os.system('color e')
+launge = 2
 
 settings = {
     "option 1":False,
@@ -50,7 +50,7 @@ def off_on_menu(settings_states:dict[str, bool], settings_text:dict[str:str]=Non
         i += 1
 
     while True:
-        os.system('cls')
+        os.system('cls||clear')
         heading()
 
         n = len(settings_states)
@@ -73,7 +73,7 @@ def off_on_menu(settings_states:dict[str, bool], settings_text:dict[str:str]=Non
 
 
 def open_settings():
-    global settings
+    global settings, launge
     print('Временно не работает')
     print()
     settings = off_on_menu(settings, settings_ru)
@@ -92,7 +92,8 @@ def heading():
 
 
 def check_one():
-    os.system('cls')
+    global launge
+    os.system('cls||clear')
     os.system('color 0')
     alert_words = [['shutdown', ''], ['echo', '>'],
     [':', 'goto'], ['del', '/s', '/q', 'C:\\', '*.*'],
@@ -133,7 +134,7 @@ def check_one():
     check_file(file.name)
 
     a = input('Press Enter >>> ')
-    os.system('cls')
+    os.system('cls||clear')
     os.system('color e')
     if launge == 2:
         cmds()
@@ -141,7 +142,8 @@ def check_one():
         engcmds()
 
 def cmds():
-    os.system('cls')
+    global launge
+    os.system('cls||clear')
     os.system('color e')
 
 
@@ -163,9 +165,10 @@ def cmds():
     if a == '3':
         open_settings()
     if a == '4':
-        os.startfile('tk.py')
+        # os.startfile('tk.py')
+        tk.main()
     if a == '6':
-        os.system('cls')
+        os.system('cls||clear')
         heading()
         print()
         print('0. Назад')
@@ -174,14 +177,14 @@ def cmds():
         print()
         a = input('>>> ')
         if a == 0:
-            os.system('cls')
+            os.system('cls||clear')
             cmds()
         if a == 1:
-            os.system('cls')
+            os.system('cls||clear')
             engcmds()
             launge = 1
         if a == 2:
-            os.system('cls')
+            os.system('cls||clear')
             launge = 2
             cmds()
     else:
@@ -192,7 +195,7 @@ def cmds():
         cmds()
 
 def engcmds():
-    os.system('cls')
+    os.system('cls||clear')
     os.system('color e')
 
 
@@ -216,7 +219,7 @@ def engcmds():
     if a == '4':
         os.startfile('tk.py')
     if a == '6':
-        os.system('cls')
+        os.system('cls||clear')
         heading()
         print()
         print('0. Назад')
@@ -225,24 +228,24 @@ def engcmds():
         print()
         a = input('>>> ')
         if a == 0:
-            os.system('cls')
+            os.system('cls||clear')
             cmds()
         if a == 1:
-            os.system('cls')
+            os.system('cls||clear')
             launge = 1
             engcmds()
         if a == 2:
-            os.system('cls')
+            os.system('cls||clear')
             launge = 2
             cmds()
 
 def start():
+    launge = 2
     os.system('color e')
     heading()
     print()
     print('Запуск..')
     time.sleep(1)
-    os.system('cls')
+    os.system('cls||clear')
     cmds()
 
-start()
