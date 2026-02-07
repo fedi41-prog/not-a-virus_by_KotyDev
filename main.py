@@ -1,6 +1,6 @@
-import os, cm, tk
-os.system('cls||clear')
-
+import os
+os.system('cls')
+os.system('color e')
 
 
 def heading():
@@ -14,6 +14,8 @@ def heading():
     print('0. Выйти')
     print('1. Открыть CMD Интерфейс')
     print('2. Открыть Tkinter Интерфейс (BETA)')
+    print()
+    print('ПРОГРАММА НАХОДИТСЯ В BETA ТЕСТЕ И СОДЕРЖИТ БАГИ')
     print()
     a = input('>>> ')
 

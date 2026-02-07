@@ -8,15 +8,44 @@ import time
 # os.system('color e')
 launge = 2
 
+def laung():
+    global settings_ru
+    heading()
+    print()
+    print('Выбирите язык:')
+    print()
+    print('1. English')
+    print('2. Русский')
+    print()
+    a = input(' >>> ')
+    if a == '1':
+        settings_ru = {
+    "option 1":"First setting",
+    "option 2":"Second setting",
+    "option 3":"Third setting"
+}
+        engcmds()
+    elif a == '2':
+        settings_ru = {
+    "option 1":"Перваяя настройка",
+    "option 2":"Вторая настройка",
+    "option 3":"Третья настройка"
+}
+        cmds()
+
+def start():
+    os.system('color e')
+    heading()
+    print()
+    print('Запуск..')
+    time.sleep(1)
+    os.system('cls')
+    laung()
+
 settings = {
     "option 1":False,
     "option 2":False,
     "option 3":False
-}
-settings_ru = {
-    "option 1":"Первая настройка",
-    "option 2":"Вторая настройка",
-    "option 3":"Третья настройка"
 }
 
 # так просто может полезная функция (:
@@ -73,7 +102,8 @@ def off_on_menu(settings_states:dict[str, bool], settings_text:dict[str:str]=Non
 
 
 def open_settings():
-    global settings, launge
+    global settings
+    global settings_ru
     print('Временно не работает')
     print()
     settings = off_on_menu(settings, settings_ru)
@@ -152,10 +182,10 @@ def cmds():
     print()
     print('1. Начать проверку файла')
     print('2. Проверить на трояны (В разработке)')
-    print('3. Настройки (Работает Частично)')
+    print('3. Настройки')
     print('4. Открыть интерфес Tkinter')
-    print('5. Админ-Панель (В разработке)')
-    print('6. Сменить язык (В разработке)')
+    print('5. Админ-Панель')
+    print('6. Сменить язык ')
     print()
     a = input('>>> ')
 
@@ -165,8 +195,9 @@ def cmds():
     if a == '3':
         open_settings()
     if a == '4':
-        # os.startfile('tk.py')
-        tk.main()
+        os.startfile('tk.py')
+    if a == '5':
+        os.startfile('panel.py')
     if a == '6':
         os.system('cls||clear')
         heading()
@@ -176,15 +207,15 @@ def cmds():
         print('2. Русский')
         print()
         a = input('>>> ')
-        if a == 0:
-            os.system('cls||clear')
+        if a == '0':
+            os.system('cls')
             cmds()
-        if a == 1:
-            os.system('cls||clear')
+        if a == '1':
+            os.system('cls')
             engcmds()
             launge = 1
-        if a == 2:
-            os.system('cls||clear')
+        if a == '2':
+            os.system('cls')
             launge = 2
             cmds()
     else:
@@ -204,10 +235,10 @@ def engcmds():
     print()
     print('1. Start file scan')
     print('2. Check for Trojans (In development)')
-    print('3. Settings (Partially working)')
+    print('3. Settings ')
     print('4. Open Tkinter interface')
-    print('5. Admin Panel (In development)')
-    print('6. Change language (In development)')
+    print('5. Admin Panel (Only Russian Launge)')
+    print('6. Change language')
     print()
     a = input('>>> ')
 
@@ -218,6 +249,8 @@ def engcmds():
         open_settings()
     if a == '4':
         os.startfile('tk.py')
+    if a == '5':
+        os.startfile('panel.py')
     if a == '6':
         os.system('cls||clear')
         heading()
@@ -227,25 +260,16 @@ def engcmds():
         print('2. Русский')
         print()
         a = input('>>> ')
-        if a == 0:
-            os.system('cls||clear')
+        if a == '0':
+            os.system('cls')
             cmds()
-        if a == 1:
-            os.system('cls||clear')
+        if a == '1':
+            os.system('cls')
             launge = 1
             engcmds()
-        if a == 2:
-            os.system('cls||clear')
+        if a == '2':
+            os.system('cls')
             launge = 2
             cmds()
 
-def start():
-    launge = 2
-    os.system('color e')
-    heading()
-    print()
-    print('Запуск..')
-    time.sleep(1)
-    os.system('cls||clear')
-    cmds()
-
+start()
