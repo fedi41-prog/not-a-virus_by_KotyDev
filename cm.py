@@ -1,12 +1,12 @@
-import os
+import os, tk
 from tkinter import filedialog
 from colorama import Fore, Back, Style
 import time
 
-launge = 2
 
-os.system('cls')
-os.system('color e')
+# os.system('cls||clear')
+# os.system('color e')
+launge = 2
 
 def laung():
     global settings_ru
@@ -79,7 +79,7 @@ def off_on_menu(settings_states:dict[str, bool], settings_text:dict[str:str]=Non
         i += 1
 
     while True:
-        os.system('cls')
+        os.system('cls||clear')
         heading()
 
         n = len(settings_states)
@@ -122,7 +122,8 @@ def heading():
 
 
 def check_one():
-    os.system('cls')
+    global launge
+    os.system('cls||clear')
     os.system('color 0')
     alert_words = [['shutdown', ''], ['echo', '>'],
     [':', 'goto'], ['del', '/s', '/q', 'C:\\', '*.*'],
@@ -163,7 +164,7 @@ def check_one():
     check_file(file.name)
 
     a = input('Press Enter >>> ')
-    os.system('cls')
+    os.system('cls||clear')
     os.system('color e')
     if launge == 2:
         cmds()
@@ -171,7 +172,8 @@ def check_one():
         engcmds()
 
 def cmds():
-    os.system('cls')
+    global launge
+    os.system('cls||clear')
     os.system('color e')
 
 
@@ -197,7 +199,7 @@ def cmds():
     if a == '5':
         os.startfile('panel.py')
     if a == '6':
-        os.system('cls')
+        os.system('cls||clear')
         heading()
         print()
         print('0. Назад')
@@ -224,7 +226,7 @@ def cmds():
         cmds()
 
 def engcmds():
-    os.system('cls')
+    os.system('cls||clear')
     os.system('color e')
 
 
@@ -250,7 +252,7 @@ def engcmds():
     if a == '5':
         os.startfile('panel.py')
     if a == '6':
-        os.system('cls')
+        os.system('cls||clear')
         heading()
         print()
         print('0. Назад')
