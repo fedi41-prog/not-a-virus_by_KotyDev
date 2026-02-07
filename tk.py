@@ -305,8 +305,9 @@ class App(ctk.CTk):
         ).grid(row=4, column=1, pady=4, padx=20, sticky="w")
 
 
-def main():
+# Запуск приложения
+if __name__ == "__main__":
     app = App()
     app.mainloop()
-# Запуск приложения
+
 #Вся программа сделана командой KotyaDev. Все права защищены. KotyaDev 2025
