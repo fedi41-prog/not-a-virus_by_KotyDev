@@ -1,27 +1,38 @@
 import os
-os.system('cls')
-os.system('color e')
-
 
 def heading():
+    os.system('cls')
+    os.system('color e')
     print(' _______          __               _____           ____   ____.__                     ')
     print(' \      \   _____/  |_            /  _  \          \   \ /   /|__|______ __ __  ______')
     print(' /   |   \ /  _ \   __\  ______  /  /_\  \   ______ \   Y   / |  \_  __ \  |  \/  ___/')
     print('/    |    (  <_> )  |   /_____/ /    |    \ /_____/  \     /  |  ||  | \/  |  /\___ \ ')
     print('\____|__  /\____/|__|           \____|__  /           \___/   |__||__|  |____//____  >')
     print('        \/                              \/                                         \/ ')
+
+def start():
+    heading()
     print()
-    print('0. Выйти')
-    print('1. Открыть CMD Интерфейс')
-    print('2. Открыть Tkinter Интерфейс (BETA)')
+    print('АДМИН-ПАНЕЛЬ')
     print()
-    print('ПРОГРАММА НАХОДИТСЯ В BETA ТЕСТЕ И СОДЕРЖИТ БАГИ')
+    print('1. Закрыть')
+    print('2. История (Временно не работает)')
+    print('3. Режим редактора (Временно не работает)')
+    print('4. Ручной ввод')
     print()
-    a = input('>>> ')
+    print('Временно доступен только ручной ввод.')
+    print()
+    a = input(' >>> ')
 
     if a == '1':
-        os.startfile('cm.py')
+        os.startfile('Main.py')
     if a == '2':
-        os.startfile('tk.py')
+        start()
+    if a == '3':
+        start()
+    if a == '4':
+        os.startfile('headread.py')
+    else:
+        start()
 
-heading()
+start()
